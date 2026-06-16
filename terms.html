@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CartMind - Terms of Service | Smart E‑commerce</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafbfc;
+            color: #121826;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header same as homepage */
+        .header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 18px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-icon {
+            background: #1e2a3e;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1a2c3e, #0f212f);
+            box-shadow: 0 6px 12px -8px rgba(0,0,0,0.2);
+        }
+
+        .logo-icon i {
+            font-size: 22px;
+            color: white;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #1e2f3f, #2b4f6c);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #5b6e8c;
+            letter-spacing: 0.3px;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e4e;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #2b6a9f;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 1.35rem;
+            background: #f0f4f9;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .cart-icon:hover {
+            background: #e6edf4;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: #e2583e;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 2px 6px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        /* terms hero */
+        .terms-hero {
+            background: linear-gradient(110deg, #f1f6fc 0%, #e9f0f7 100%);
+            padding: 50px 0 40px;
+            border-bottom: 1px solid #e2eaf1;
+        }
+
+        .terms-header {
+            text-align: center;
+        }
+
+        .terms-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0e2a38;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .terms-header p {
+            color: #2c4b66;
+            font-size: 1rem;
+        }
+
+        .last-updated {
+            background: #ffffffcc;
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            backdrop-filter: blur(2px);
+        }
+
+        /* main content */
+        .terms-content {
+            padding: 56px 0 80px;
+        }
+
+        .terms-card {
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px 48px;
+            border: 1px solid #edf2f8;
+        }
+
+        .terms-section {
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+        }
+
+        .terms-section h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #1f3f57;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 4px solid #2b6a9f;
+            padding-left: 20px;
+        }
+
+        .terms-section h2 i {
+            font-size: 1.5rem;
+            color: #2b6a9f;
+        }
+
+        .terms-section p, .terms-section li {
+            color: #2c3e50;
+            margin-bottom: 14px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 16px 0 16px 32px;
+        }
+
+        .terms-section li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-badge {
+            background: #eef3fc;
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1f6392;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        hr {
+            margin: 32px 0;
+            border: 0;
+            height: 1px;
+            background: #e2edf5;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1f3f57;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 24px;
+            transition: 0.2s;
+        }
+
+        .back-home:hover {
+            background: #0f2f44;
+            transform: translateY(-2px);
+        }
+
+        /* footer */
+        .footer {
+            background: #0c1a24;
+            color: #cddfe9;
+            padding: 48px 0 32px;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+
+        .footer-col p {
+            margin-top: 12px;
+            max-width: 240px;
+            font-size: 0.85rem;
+        }
+
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin: 8px 0;
+        }
+
+        .footer-col a {
+            color: #b9cfe6;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 0.75rem;
+            border-top: 1px solid #253c4b;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 760px) {
+            .terms-card {
+                padding: 28px 20px;
+            }
+            .terms-section h2 {
+                font-size: 1.4rem;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .nav-links {
+                justify-content: space-between;
+            }
+        }
+
+        .toast-msg {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.9);
+            background: #1f3f57;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 60px;
+            font-weight: 500;
+            opacity: 0;
+            transition: 0.2s;
+            pointer-events: none;
+            z-index: 200;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        }
+
+        .toast-msg.show {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+
+
+
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <a href="#" class="logo-area" id="homeLinkLogo" style="text-decoration: none;">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>CartMind</h1>
+                    <span>smart cart · smart life</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+                    <span class="cart-count" id="cartCountDisplay">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Terms Hero -->
+<section class="terms-hero">
+    <div class="container">
+        <div class="terms-header">
+            <h1>Terms of Service</h1>
+            <p>Agreement between you and CartMind — clarity, fairness, and smart commerce.</p>
+            <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: June 15, 2026</div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Terms Content -->
+<div class="container terms-content">
+    <div class="terms-card">
+        <div class="terms-section" id="overview">
+            <h2><i class="fas fa-scroll"></i> 1. Overview</h2>
+            <p>Welcome to CartMind ("Company", "we", "our", "us")! These Terms of Service ("Terms") govern your use of our website located at <strong>www.cartmind.com</strong> (the "Site") and any related services, features, or applications (collectively, the "Service"). By accessing or using CartMind, you agree to be bound by these Terms. If you disagree with any part, please do not use our Service.</p>
+            <p>CartMind provides a smart e‑commerce platform connecting you with curated products, intelligent cart recommendations, and seamless checkout experiences. We're committed to transparency — these terms explain your rights and responsibilities.</p>
+        </div>
+
+        <div class="terms-section" id="account">
+            <h2><i class="fas fa-user-check"></i> 2. Account & Registration</h2>
+            <p>To access certain features, you may need to create an account. You agree to provide accurate, current, and complete information. You are solely responsible for safeguarding your password and for all activities under your account. Notify us immediately of any breach. CartMind reserves the right to suspend or terminate accounts that violate these Terms or applicable laws.</p>
+            <ul>
+                <li><span class="highlight-badge">✓</span> You must be at least 16 years old or have parental consent.</li>
+                <li><span class="highlight-badge">✓</span> One person may not maintain multiple accounts for abusive purposes.</li>
+                <li><span class="highlight-badge">✓</span> CartMind uses secure authentication and never stores raw passwords.</li>
+            </ul>
+        </div>
+
+        <div class="terms-section" id="purchases">
+            <h2><i class="fas fa-shopping-cart"></i> 3. Products, Pricing & Orders</h2>
+            <p>All product descriptions, images, and prices are subject to change without notice. We strive for accuracy but do not warrant that product descriptions or other content are error-free. CartMind reserves the right to limit quantities, cancel orders, or correct pricing errors even after an order is placed. Your receipt of an order confirmation does not signify our acceptance — we may cancel with a full refund.</p>
+            <p>Payment processing is handled by secure third-party gateways. By completing a purchase, you agree to pay all charges incurred. Shipping times are estimates; CartMind is not liable for delays caused by carriers.</p>
+        </div>
+
+        <div class="terms-section" id="returns">
+            <h2><i class="fas fa-undo-alt"></i> 4. Returns & Refunds</h2>
+            <p>We offer a 30-day return policy for most products in original condition. To initiate a return, contact our support team. Refunds are issued to the original payment method within 10–14 business days after we receive and inspect the returned item. Certain items (digital goods, final sale products) are non-returnable.</p>
+            <p>CartMind's "Smart Return" feature uses AI to streamline exchanges — but final eligibility depends on the product type. For defective items, we cover return shipping costs.</p>
+        </div>
+
+        <div class="terms-section" id="prohibited">
+            <h2><i class="fas fa-gavel"></i> 5. Prohibited Conduct</h2>
+            <p>You agree not to misuse the Service. Prohibited activities include but are not limited to:</p>
+            <ul>
+                <li>Violating any laws or regulations;</li>
+                <li>Interfering with security features or attempting to bypass our systems;</li>
+                <li>Using bots, scrapers, or automated methods to access the Site without permission;</li>
+                <li>Uploading malicious code, viruses, or harmful material;</li>
+                <li>Harassing other users or staff, posting offensive content.</li>
+            </ul>
+            <p>Violation may result in immediate termination of your account and legal action where appropriate.</p>
+        </div>
+
+        <div class="terms-section" id="intellectual">
+            <h2><i class="fas fa-copyright"></i> 6. Intellectual Property</h2>
+            <p>All content on CartMind — including trademarks, logos, graphics, code, product curation, and the "CartMind" name — is our property or that of our licensors. You may not reproduce, distribute, modify, or create derivative works without explicit written consent. You retain ownership of your user-generated content (reviews, comments) but grant CartMind a non-exclusive, royalty-free license to display and promote it across our platform.</p>
+        </div>
+
+        <div class="terms-section" id="disclaimers">
+            <h2><i class="fas fa-exclamation-triangle"></i> 7. Disclaimer of Warranties</h2>
+            <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." CARTMIND DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT THE SITE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS. YOUR USE IS AT YOUR SOLE RISK.</p>
+            <p>Some jurisdictions do not allow certain warranty disclaimers, so these limitations may not apply to you.</p>
+        </div>
+
+        <div class="terms-section" id="limitation">
+            <h2><i class="fas fa-balance-scale"></i> 8. Limitation of Liability</h2>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, CARTMIND AND ITS OFFICERS, EMPLOYEES, OR AFFILIATES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS OR DATA, ARISING FROM YOUR USE OF THE SERVICE, EVEN IF ADVISED OF THE POSSIBILITY. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE PAST SIX MONTHS.</p>
+        </div>
+
+        <div class="terms-section" id="governing">
+            <h2><i class="fas fa-gavel"></i> 9. Governing Law & Disputes</h2>
+            <p>These Terms shall be governed by the laws of the State of Delaware, without regard to conflict of law principles. Any dispute arising from these Terms or your use of CartMind shall be resolved through binding arbitration in Wilmington, DE, unless you opt out within 30 days of first acceptance. Small claims court actions are also permitted.</p>
+            <p>You agree to waive the right to a jury trial or to participate in a class action lawsuit.</p>
+        </div>
+
+        <div class="terms-section" id="changes">
+            <h2><i class="fas fa-edit"></i> 10. Changes to Terms</h2>
+            <p>We may revise these Terms periodically. When we make material changes, we will update the "Last updated" date and notify you via email or site notice. By continuing to use CartMind after changes become effective, you accept the revised Terms. It is your responsibility to review this page regularly.</p>
+        </div>
+
+        <div class="terms-section" id="contact">
+            <h2><i class="fas fa-envelope"></i> 11. Contact Us</h2>
+            <p>If you have any questions about these Terms, please reach out:</p>
+            <p><i class="fas fa-envelope-open-text"></i> <strong>Email:</strong> legal@cartmind.com<br>
+            <i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Smart Lane, Suite 400, Wilmington, DE 19801, USA<br>
+            <i class="fas fa-headset"></i> <strong>Support:</strong> +1 (800) 555-CART</p>
+        </div>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="#" class="back-home" id="backHomeBtn"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <i class="fas fa-brain" style="font-size: 26px;"></i>
+                    <strong style="font-size: 1.4rem;">CartMind</strong>
+                </div>
+                <p>Reinventing the online cart experience with clarity and intelligence.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="#">New arrivals</a></li>
+                    <li><a href="#">Best sellers</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#" id="termsFooterLink">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 CartMind — smart e-commerce for curious minds. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<div id="toastMsg" class="toast-msg">✨ CartMind • Legal info</div>
+
+<script>
+    // Simple cart demo (to keep consistency with main page behavior)
+    let cartItems = [];
+    function loadCartFromStorage() {
+        const stored = localStorage.getItem("cartmind_cart");
+        if (stored) {
+            try { cartItems = JSON.parse(stored); if (!Array.isArray(cartItems)) cartItems = []; } catch(e) { cartItems = []; }
+        } else { cartItems = []; }
+        updateCartUI();
+    }
+    function getTotalItemsCount() { return cartItems.reduce((sum, item) => sum + item.qty, 0); }
+    function updateCartUI() {
+        const countSpan = document.getElementById("cartCountDisplay");
+        if (countSpan) countSpan.innerText = getTotalItemsCount();
+    }
+    function showToast(message) {
+        const toast = document.getElementById("toastMsg");
+        if (!toast) return;
+        toast.innerText = message;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+    loadCartFromStorage();
+
+    // navigation simulation (since we don't have actual routes, just show toasts or redirect to homepage simulation)
+    const homeLink = document.getElementById("homeLinkLogo");
+    const backHomeBtn = document.getElementById("backHomeBtn");
+    const shopLink = document.getElementById("shopLink");
+    const dealsLink = document.getElementById("dealsLink");
+    const supportLink = document.getElementById("supportLink");
+    const cartIcon = document.getElementById("cartIconBtn");
+    const termsFooterLink = document.getElementById("termsFooterLink");
+
+    function simulateHomeRedirect() {
+        showToast("🏠 Returning to CartMind homepage...");
+        setTimeout(() => { window.location.href = "."; }, 300);
+    }
+
+    if (homeLink) homeLink.addEventListener("click", (e) => { e.preventDefault(); simulateHomeRedirect(); });
+    if (backHomeBtn) backHomeBtn.addEventListener("click", (e) => { e.preventDefault(); simulateHomeRedirect(); });
+    if (shopLink) shopLink.addEventListener("click", (e) => { e.preventDefault(); showToast("🛍️ Explore trending products on homepage"); setTimeout(() => { window.location.href = "."; }, 400); });
+    if (dealsLink) dealsLink.addEventListener("click", (e) => { e.preventDefault(); showToast("🔥 Hot deals — check homepage for smart bundles"); setTimeout(() => { window.location.href = "."; }, 400); });
+    if (supportLink) supportLink.addEventListener("click", (e) => { e.preventDefault(); showToast("💬 Support: help@cartmind.com | Live chat coming soon"); });
+    if (cartIcon) cartIcon.addEventListener("click", (e) => { e.preventDefault(); const count = getTotalItemsCount(); showToast(count > 0 ? `🛒 Your CartMind has ${count} item(s). Go to homepage to checkout.` : "🛒 Cart is empty, add products from the shop!"); });
+    if (termsFooterLink) termsFooterLink.addEventListener("click", (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); showToast("📜 You're already on the Terms page"); });
+
+    // additional smooth scroll for anchor links if any
+    document.querySelectorAll('.terms-section a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElem = document.getElementById(targetId);
+            if (targetElem) {
+                e.preventDefault();
+                targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+</body>
+</html>

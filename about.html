@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CartMind - About Us | The Story Behind Smart Commerce</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafbfc;
+            color: #121826;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header (matching brand) */
+        .header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 18px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-icon {
+            background: #1e2a3e;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1a2c3e, #0f212f);
+            box-shadow: 0 6px 12px -8px rgba(0,0,0,0.2);
+        }
+
+        .logo-icon i {
+            font-size: 22px;
+            color: white;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #1e2f3f, #2b4f6c);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #5b6e8c;
+            letter-spacing: 0.3px;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e4e;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #2b6a9f;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 1.35rem;
+            background: #f0f4f9;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .cart-icon:hover {
+            background: #e6edf4;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: #e2583e;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 2px 6px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        /* About Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, #f1f6fc 0%, #e6f0f8 100%);
+            padding: 60px 0 60px;
+            border-bottom: 1px solid #e2eaf1;
+        }
+
+        .about-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-header h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #0e2a38;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .about-header .tagline {
+            font-size: 1.2rem;
+            color: #2c4b66;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .about-header .divider {
+            width: 80px;
+            height: 4px;
+            background: #2b6a9f;
+            margin: 24px auto 0;
+            border-radius: 4px;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 70px 0 40px;
+        }
+        .story-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+        .story-text {
+            flex: 1.2;
+        }
+        .story-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f3f57;
+            margin-bottom: 20px;
+            border-left: 4px solid #2b6a9f;
+            padding-left: 20px;
+        }
+        .story-text p {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .story-image {
+            flex: 0.9;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+        }
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .story-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Mission & Vision Cards */
+        .mission-vision {
+            padding: 40px 0 60px;
+        }
+        .mv-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .mv-card {
+            background: white;
+            border-radius: 28px;
+            padding: 32px 28px;
+            flex: 1;
+            min-width: 260px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eef2f8;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .mv-card:hover {
+            transform: translateY(-6px);
+            border-color: #cde0ef;
+            box-shadow: 0 20px 28px -12px rgba(0,0,0,0.1);
+        }
+        .mv-icon {
+            font-size: 3rem;
+            color: #2b6a9f;
+            margin-bottom: 20px;
+        }
+        .mv-card h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1f3f57;
+        }
+        .mv-card p {
+            color: #3a566b;
+            line-height: 1.5;
+        }
+
+        /* Values Section */
+        .values-section {
+            background: #ffffff;
+            padding: 60px 0;
+            border-top: 1px solid #eef2f6;
+            border-bottom: 1px solid #eef2f6;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0e2a38;
+        }
+        .section-title p {
+            color: #5b6f82;
+            max-width: 600px;
+            margin: 12px auto 0;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+        .value-item {
+            text-align: center;
+            padding: 24px 16px;
+            background: #fafdff;
+            border-radius: 24px;
+            transition: 0.2s;
+        }
+        .value-item i {
+            font-size: 2.5rem;
+            background: #eef3fc;
+            padding: 16px;
+            border-radius: 60px;
+            color: #1f6392;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .value-item h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .value-item p {
+            font-size: 0.95rem;
+            color: #4a627a;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 70px 0 60px;
+            background: #f9fbfe;
+        }
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+        .team-card {
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            width: 260px;
+            text-align: center;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+            transition: all 0.25s;
+            border: 1px solid #e9f0f5;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.12);
+        }
+        .team-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background: #eef2f6;
+        }
+        .team-info {
+            padding: 20px 16px 24px;
+        }
+        .team-info h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .team-info p {
+            color: #6c86a0;
+            font-size: 0.85rem;
+            margin: 6px 0 12px;
+        }
+        .social-icons i {
+            margin: 0 6px;
+            color: #8fa0b5;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .social-icons i:hover {
+            color: #2b6a9f;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(115deg, #1e3a4d 0%, #123a4e 100%);
+            margin: 50px auto 30px;
+            border-radius: 48px;
+            padding: 52px 40px;
+            text-align: center;
+            color: white;
+        }
+        .cta-banner h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .cta-banner p {
+            max-width: 500px;
+            margin: 0 auto 28px;
+            opacity: 0.9;
+        }
+        .cta-btn {
+            background: white;
+            color: #1f3f57;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+        .cta-btn:hover {
+            background: #f0f4fa;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0c1a24;
+            color: #cddfe9;
+            padding: 48px 0 32px;
+            margin-top: 20px;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        .footer-col p {
+            margin-top: 12px;
+            max-width: 240px;
+            font-size: 0.85rem;
+        }
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin: 8px 0;
+        }
+        .footer-col a {
+            color: #b9cfe6;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 0.75rem;
+            border-top: 1px solid #253c4b;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 760px) {
+            .about-header h1 { font-size: 2.2rem; }
+            .story-grid { flex-direction: column; }
+            .navbar { flex-direction: column; align-items: stretch; }
+            .nav-links { justify-content: space-between; }
+            .cta-banner h3 { font-size: 1.5rem; }
+        }
+
+        .toast-msg {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.9);
+            background: #1f3f57;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 60px;
+            font-weight: 500;
+            opacity: 0;
+            transition: 0.2s;
+            pointer-events: none;
+            z-index: 200;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        }
+        .toast-msg.show {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <a href="#" class="logo-area" id="homeLinkLogo" style="text-decoration: none;">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>CartMind</h1>
+                    <span>smart cart · smart life</span>
+                </div>
+            </a>
+            <div class="nav-links">
+               <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+                    <span class="cart-count" id="cartCountDisplay">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Hero -->
+<section class="about-hero">
+    <div class="container">
+        <div class="about-header">
+            <h1>Welcome to CartMind</h1>
+            <div class="tagline">Where intelligence meets effortless shopping</div>
+            <p style="max-width: 700px; margin: 0 auto; color: #2c4b66;">We're reimagining the e‑commerce experience — blending AI-driven personalization, ethical commerce, and a passion for helping you discover products you'll truly love.</p>
+            <div class="divider"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story -->
+<div class="container story-section">
+    <div class="story-grid">
+        <div class="story-text">
+            <h2>Our Story</h2>
+            <p>CartMind was born in 2021 from a simple insight: shopping online should feel less like a chore and more like a conversation with a trusted friend. Frustrated by clunky carts, hidden fees, and overwhelming choices, our founders set out to build a platform that puts intelligence and simplicity at the heart of e‑commerce.</p>
+            <p>What started as a small team of engineers and designers in Delaware has grown into a vibrant community of innovators, all driven by the same mission: to empower shoppers with smart tools, curated selections, and complete transparency. Today, CartMind serves thousands of happy customers worldwide — and we're just getting started.</p>
+            <p><i class="fas fa-quote-left" style="color: #2b6a9f; margin-right: 8px;"></i> We believe your cart should work for you, not the other way around.</p>
+        </div>
+        <div class="story-image">
+            <img src="https://picsum.photos/id/26/600/500" alt="CartMind team collaboration">
+        </div>
+    </div>
+</div>
+
+<!-- Mission & Vision -->
+<div class="container mission-vision">
+    <div class="mv-grid">
+        <div class="mv-card">
+            <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Our Mission</h3>
+            <p>To simplify online shopping through intuitive design and smart cart technology — saving you time, money, and mental energy.</p>
+        </div>
+        <div class="mv-card">
+            <div class="mv-icon"><i class="fas fa-eye"></i></div>
+            <h3>Our Vision</h3>
+            <p>A world where every purchase feels intentional, personalized, and joyful — powered by ethical AI and human-centric values.</p>
+        </div>
+        <div class="mv-card">
+            <div class="mv-icon"><i class="fas fa-heart"></i></div>
+            <h3>Our Promise</h3>
+            <p>Transparent pricing, privacy-first approach, and 24/7 support — because you deserve nothing less.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Core Values -->
+<div class="values-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Drives Us</h2>
+            <p>Core values that shape every decision at CartMind</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-item">
+                <i class="fas fa-microchip"></i>
+                <h4>Smart Innovation</h4>
+                <p>Continuous improvement through AI, machine learning, and user-first design.</p>
+            </div>
+            <div class="value-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h4>Radical Transparency</h4>
+                <p>No hidden fees, honest product reviews, and clear data practices.</p>
+            </div>
+            <div class="value-item">
+                <i class="fas fa-globe"></i>
+                <h4>Sustainable Impact</h4>
+                <p>Eco-friendly packaging, carbon-neutral shipping, and ethical sourcing.</p>
+            </div>
+            <div class="value-item">
+                <i class="fas fa-users"></i>
+                <h4>Community First</h4>
+                <p>We listen, adapt, and grow alongside our customers and partners.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Meet the Team (with working images) -->
+<div class="team-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Meet the Minds Behind CartMind</h2>
+            <p>Passionate creators, engineers, and dreamers</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <img class="team-img" src="https://picsum.photos/id/64/300/300" alt="CEO Portrait">
+                <div class="team-info">
+                    <h4>Alex Morgan</h4>
+                    <p>Co-Founder & CEO</p>
+                    <div class="social-icons"><i class="fab fa-linkedin-in"></i> <i class="fab fa-twitter"></i></div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img class="team-img" src="https://picsum.photos/id/29/300/300" alt="CTO portrait">
+                <div class="team-info">
+                    <h4>Jamie Lin</h4>
+                    <p>Chief Technology Officer</p>
+                    <div class="social-icons"><i class="fab fa-linkedin-in"></i> <i class="fab fa-github"></i></div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img class="team-img" src="https://picsum.photos/id/91/300/300" alt="Head of Design">
+                <div class="team-info">
+                    <h4>Sophia Chen</h4>
+                    <p>Head of Product & Design</p>
+                    <div class="social-icons"><i class="fab fa-dribbble"></i> <i class="fab fa-instagram"></i></div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img class="team-img" src="https://picsum.photos/id/27/300/300" alt="Customer Experience">
+                <div class="team-info">
+                    <h4>Marcus Taylor</h4>
+                    <p>CX Director</p>
+                    <div class="social-icons"><i class="fab fa-twitter"></i> <i class="fab fa-linkedin-in"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stats / Milestones -->
+<div class="container" style="padding: 20px 0 30px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px; text-align: center; background: #ffffff; border-radius: 48px; padding: 40px 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); border: 1px solid #ecf3f9;">
+        <div><h2 style="font-size: 2.5rem; color:#1f3f57;">10k+</h2><p>Happy Customers</p></div>
+        <div><h2 style="font-size: 2.5rem; color:#1f3f57;">500+</h2><p>Curated Brands</p></div>
+        <div><h2 style="font-size: 2.5rem; color:#1f3f57;">99%</h2><p>On-time Delivery</p></div>
+        <div><h2 style="font-size: 2.5rem; color:#1f3f57;">24/7</h2><p>Smart Support</p></div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="container">
+    <div class="cta-banner">
+        <h3>Join the CartMind Community</h3>
+        <p>Experience the future of smart shopping — curated, conscious, and always human-first.</p>
+        <a href="#" class="cta-btn" id="ctaExploreBtn">Start Shopping <i class="fas fa-arrow-right"></i></a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <i class="fas fa-brain" style="font-size: 26px;"></i>
+                    <strong style="font-size: 1.4rem;">CartMind</strong>
+                </div>
+                <p>Reinventing the online cart experience with clarity and intelligence.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="#">New arrivals</a></li>
+                    <li><a href="#">Best sellers</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#" id="termsFooterLink">Terms of Service</a></li>
+                    <li><a href="#" id="privacyFooterLink">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 CartMind — smart e-commerce for curious minds. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<div id="toastMsg" class="toast-msg">✨ CartMind — smarter shopping starts here</div>
+
+<script>
+    // Cart state and UI for consistent header experience
+    let cartItems = [];
+    function loadCartFromStorage() {
+        const stored = localStorage.getItem("cartmind_cart");
+        if (stored) {
+            try { cartItems = JSON.parse(stored); if (!Array.isArray(cartItems)) cartItems = []; } catch(e) { cartItems = []; }
+        } else { cartItems = []; }
+        updateCartUI();
+    }
+    function getTotalItemsCount() { return cartItems.reduce((sum, item) => sum + item.qty, 0); }
+    function updateCartUI() {
+        const countSpan = document.getElementById("cartCountDisplay");
+        if (countSpan) countSpan.innerText = getTotalItemsCount();
+    }
+    function showToast(message) {
+        const toast = document.getElementById("toastMsg");
+        if (!toast) return;
+        toast.innerText = message;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+    loadCartFromStorage();
+
+    // Navigation / redirect simulation
+    function simulateHomeRedirect() {
+        showToast("🏠 Returning to CartMind homepage...");
+        setTimeout(() => { window.location.href = "."; }, 300);
+    }
+    function simulateTermsRedirect() {
+        showToast("📜 Opening Terms of Service...");
+        setTimeout(() => { window.location.href = "?page=terms"; }, 300);
+    }
+    function simulatePrivacyRedirect() {
+        showToast("🔒 Opening Privacy Policy...");
+        setTimeout(() => { window.location.href = "?page=privacy"; }, 300);
+    }
+
+    const homeLink = document.getElementById("homeLinkLogo");
+    const shopLink = document.getElementById("shopLink");
+    const dealsLink = document.getElementById("dealsLink");
+    const supportLink = document.getElementById("supportLink");
+    const cartIcon = document.getElementById("cartIconBtn");
+    const termsFooterLink = document.getElementById("termsFooterLink");
+    const privacyFooterLink = document.getElementById("privacyFooterLink");
+    const ctaExploreBtn = document.getElementById("ctaExploreBtn");
+
+    if (homeLink) homeLink.addEventListener("click", (e) => { e.preventDefault(); simulateHomeRedirect(); });
+    if (shopLink) shopLink.addEventListener("click", (e) => { e.preventDefault(); showToast("🛍️ Explore trending products on homepage"); setTimeout(() => { window.location.href = "."; }, 400); });
+    if (dealsLink) dealsLink.addEventListener("click", (e) => { e.preventDefault(); showToast("🔥 Exclusive deals — check our smart offers!"); setTimeout(() => { window.location.href = "."; }, 400); });
+    if (supportLink) supportLink.addEventListener("click", (e) => { e.preventDefault(); showToast("💬 Support: hello@cartmind.com | Live chat available 9-6 ET"); });
+    if (cartIcon) cartIcon.addEventListener("click", (e) => { e.preventDefault(); const count = getTotalItemsCount(); showToast(count > 0 ? `🛒 Cart has ${count} item(s). Head to homepage to checkout.` : "🛒 Your cart is waiting — discover smart picks!"); });
+    if (termsFooterLink) termsFooterLink.addEventListener("click", (e) => { e.preventDefault(); simulateTermsRedirect(); });
+    if (privacyFooterLink) privacyFooterLink.addEventListener("click", (e) => { e.preventDefault(); simulatePrivacyRedirect(); });
+    if (ctaExploreBtn) ctaExploreBtn.addEventListener("click", (e) => { e.preventDefault(); simulateHomeRedirect(); });
+
+    // smooth scroll for internal anchors (if needed)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElem = document.getElementById(targetId);
+            if (targetElem) {
+                e.preventDefault();
+                targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
