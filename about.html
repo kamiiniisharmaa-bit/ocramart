@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>CartMind - About Us | The Story Behind Smart Commerce</title>
+    <title>Orcamart - About Us | The Story Behind Smart Commerce</title>
     <!-- Google Fonts + Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -485,7 +485,7 @@
                     <i class="fas fa-brain"></i>
                 </div>
                 <div class="logo-text">
-                    <h1>CartMind</h1>
+                    <h1>Orcamart</h1>
                     <span>smart cart · smart life</span>
                 </div>
             </a>
@@ -505,7 +505,7 @@
 <section class="about-hero">
     <div class="container">
         <div class="about-header">
-            <h1>Welcome to CartMind</h1>
+            <h1>Welcome to Orcamart</h1>
             <div class="tagline">Where intelligence meets effortless shopping</div>
             <p style="max-width: 700px; margin: 0 auto; color: #2c4b66;">We're reimagining the e‑commerce experience — blending AI-driven personalization, ethical commerce, and a passion for helping you discover products you'll truly love.</p>
             <div class="divider"></div>
@@ -518,12 +518,12 @@
     <div class="story-grid">
         <div class="story-text">
             <h2>Our Story</h2>
-            <p>CartMind was born in 2021 from a simple insight: shopping online should feel less like a chore and more like a conversation with a trusted friend. Frustrated by clunky carts, hidden fees, and overwhelming choices, our founders set out to build a platform that puts intelligence and simplicity at the heart of e‑commerce.</p>
-            <p>What started as a small team of engineers and designers in Delaware has grown into a vibrant community of innovators, all driven by the same mission: to empower shoppers with smart tools, curated selections, and complete transparency. Today, CartMind serves thousands of happy customers worldwide — and we're just getting started.</p>
+            <p>Orcamart was born in 2021 from a simple insight: shopping online should feel less like a chore and more like a conversation with a trusted friend. Frustrated by clunky carts, hidden fees, and overwhelming choices, our founders set out to build a platform that puts intelligence and simplicity at the heart of e‑commerce.</p>
+            <p>What started as a small team of engineers and designers in Delaware has grown into a vibrant community of innovators, all driven by the same mission: to empower shoppers with smart tools, curated selections, and complete transparency. Today, Orcamart serves thousands of happy customers worldwide — and we're just getting started.</p>
             <p><i class="fas fa-quote-left" style="color: #2b6a9f; margin-right: 8px;"></i> We believe your cart should work for you, not the other way around.</p>
         </div>
         <div class="story-image">
-            <img src="https://picsum.photos/id/26/600/500" alt="CartMind team collaboration">
+            <img src="https://picsum.photos/id/26/600/500" alt="Orcamart team collaboration">
         </div>
     </div>
 </div>
@@ -554,7 +554,7 @@
     <div class="container">
         <div class="section-title">
             <h2>What Drives Us</h2>
-            <p>Core values that shape every decision at CartMind</p>
+            <p>Core values that shape every decision at Orcamart</p>
         </div>
         <div class="values-grid">
             <div class="value-item">
@@ -585,7 +585,7 @@
 <div class="team-section">
     <div class="container">
         <div class="section-title">
-            <h2>Meet the Minds Behind CartMind</h2>
+            <h2>Meet the Minds Behind Orcamart</h2>
             <p>Passionate creators, engineers, and dreamers</p>
         </div>
         <div class="team-grid">
@@ -638,7 +638,7 @@
 <!-- Call to Action -->
 <div class="container">
     <div class="cta-banner">
-        <h3>Join the CartMind Community</h3>
+        <h3>Join the Orcamart Community</h3>
         <p>Experience the future of smart shopping — curated, conscious, and always human-first.</p>
         <a href="#" class="cta-btn" id="ctaExploreBtn">Start Shopping <i class="fas fa-arrow-right"></i></a>
     </div>
@@ -651,7 +651,7 @@
             <div class="footer-col">
                 <div style="display: flex; gap: 8px; align-items: center;">
                     <i class="fas fa-brain" style="font-size: 26px;"></i>
-                    <strong style="font-size: 1.4rem;">CartMind</strong>
+                    <strong style="font-size: 1.4rem;">Orcamart</strong>
                 </div>
                 <p>Reinventing the online cart experience with clarity and intelligence.</p>
             </div>
@@ -680,18 +680,18 @@
             </div>
         </div>
         <div class="copyright">
-            © 2026 CartMind — smart e-commerce for curious minds. All rights reserved.
+            © 2026 Orcamart — smart e-commerce for curious minds. All rights reserved.
         </div>
     </div>
 </footer>
 
-<div id="toastMsg" class="toast-msg">✨ CartMind — smarter shopping starts here</div>
+<div id="toastMsg" class="toast-msg">✨ Orcamart — smarter shopping starts here</div>
 
 <script>
     // Cart state and UI for consistent header experience
     let cartItems = [];
     function loadCartFromStorage() {
-        const stored = localStorage.getItem("cartmind_cart");
+        const stored = localStorage.getItem("Orcamart_cart");
         if (stored) {
             try { cartItems = JSON.parse(stored); if (!Array.isArray(cartItems)) cartItems = []; } catch(e) { cartItems = []; }
         } else { cartItems = []; }
@@ -713,7 +713,7 @@
 
     // Navigation / redirect simulation
     function simulateHomeRedirect() {
-        showToast("🏠 Returning to CartMind homepage...");
+        showToast("🏠 Returning to Orcamart homepage...");
         setTimeout(() => { window.location.href = "."; }, 300);
     }
     function simulateTermsRedirect() {
@@ -737,7 +737,7 @@
     if (homeLink) homeLink.addEventListener("click", (e) => { e.preventDefault(); simulateHomeRedirect(); });
     if (shopLink) shopLink.addEventListener("click", (e) => { e.preventDefault(); showToast("🛍️ Explore trending products on homepage"); setTimeout(() => { window.location.href = "."; }, 400); });
     if (dealsLink) dealsLink.addEventListener("click", (e) => { e.preventDefault(); showToast("🔥 Exclusive deals — check our smart offers!"); setTimeout(() => { window.location.href = "."; }, 400); });
-    if (supportLink) supportLink.addEventListener("click", (e) => { e.preventDefault(); showToast("💬 Support: hello@cartmind.com | Live chat available 9-6 ET"); });
+    if (supportLink) supportLink.addEventListener("click", (e) => { e.preventDefault(); showToast("💬 Support: hello@Orcamart.com | Live chat available 9-6 ET"); });
     if (cartIcon) cartIcon.addEventListener("click", (e) => { e.preventDefault(); const count = getTotalItemsCount(); showToast(count > 0 ? `🛒 Cart has ${count} item(s). Head to homepage to checkout.` : "🛒 Your cart is waiting — discover smart picks!"); });
     if (termsFooterLink) termsFooterLink.addEventListener("click", (e) => { e.preventDefault(); simulateTermsRedirect(); });
     if (privacyFooterLink) privacyFooterLink.addEventListener("click", (e) => { e.preventDefault(); simulatePrivacyRedirect(); });
