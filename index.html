@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>CartMind — Smart E‑commerce Hub</title>
+  <title>Orcamart — Smart E‑commerce Hub</title>
   <!-- Google Fonts + simple reset & icons (Font Awesome via CDN) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -458,7 +458,7 @@ gtag('config', 'G-NTV0NLN2X5');
           <i class="fas fa-brain"></i>
         </div>
         <div class="logo-text">
-          <h1>CartMind</h1>
+          <h1>Orcamart</h1>
           <span>smart cart · smart life</span>
         </div>
       </div>
@@ -479,12 +479,12 @@ gtag('config', 'G-NTV0NLN2X5');
   <div class="container hero-grid">
     <div class="hero-content">
       <div class="hero-badge"><i class="fas fa-bolt"></i> Smarter way to shop</div>
-      <h2>Mindful choices,<br>powered by <span style="color:#2b6a9f">CartMind</span></h2>
+      <h2>Mindful choices,<br>powered by <span style="color:#2b6a9f">Orcamart</span></h2>
       <p>Discover curated electronics, fashion and home essentials — all with one intelligent cart. Free shipping & 30-day returns.</p>
       <button class="btn-primary" id="exploreBtn">Explore now <i class="fas fa-arrow-right"></i></button>
     </div>
     <div class="hero-image">
-      <img src="https://picsum.photos/id/20/500/500" alt="CartMind hero shopping showcase" loading="eager">
+      <img src="https://picsum.photos/id/20/500/500" alt="Orcamart hero shopping showcase" loading="eager">
     </div>
   </div>
 </section>
@@ -502,7 +502,7 @@ gtag('config', 'G-NTV0NLN2X5');
   <div class="feature-banner">
     <div class="banner-text">
       <h4><i class="fas fa-microchip"></i> AI-powered cart</h4>
-      <p>CartMind syncs across devices, tracks best prices & reminds you of hidden deals.</p>
+      <p>Orcamart syncs across devices, tracks best prices & reminds you of hidden deals.</p>
     </div>
     <button class="banner-btn" id="bannerDealBtn">Shop smart bundles →</button>
   </div>
@@ -514,7 +514,7 @@ gtag('config', 'G-NTV0NLN2X5');
       <div class="footer-col">
         <div style="display: flex; gap: 8px; align-items: center;">
           <i class="fas fa-brain" style="font-size: 26px;"></i>
-          <strong style="font-size: 1.4rem;">CartMind</strong>
+          <strong style="font-size: 1.4rem;">Orcamart</strong>
         </div>
         <p>Reinventing the online cart experience with clarity and intelligence.</p>
       </div>
@@ -543,7 +543,7 @@ gtag('config', 'G-NTV0NLN2X5');
       </div>
     </div>
     <div class="copyright">
-      © 2026 CartMind — smart e-commerce for curious minds. All images dynamically sourced.
+      © 2026 Orcamart — smart e-commerce for curious minds. All images dynamically sourced.
     </div>
   </div>
 </footer>
@@ -595,7 +595,7 @@ gtag('config', 'G-NTV0NLN2X5');
     },
     {
       id: 6,
-      name: "CartMind Tote (Eco)",
+      name: "Orcamart Tote (Eco)",
       category: "Lifestyle",
       price: 24.90,
       image: "https://picsum.photos/id/36/400/400",
@@ -608,7 +608,7 @@ gtag('config', 'G-NTV0NLN2X5');
 
   // Helper: load cart from localStorage
   function loadCartFromStorage() {
-    const stored = localStorage.getItem("cartmind_cart");
+    const stored = localStorage.getItem("Orcamart_cart");
     if (stored) {
       try {
         cartItems = JSON.parse(stored);
@@ -622,7 +622,7 @@ gtag('config', 'G-NTV0NLN2X5');
 
   // Save cart to localStorage
   function persistCart() {
-    localStorage.setItem("cartmind_cart", JSON.stringify(cartItems));
+    localStorage.setItem("Orcamart_cart", JSON.stringify(cartItems));
   }
 
   // get quantity for a product id
@@ -641,7 +641,7 @@ gtag('config', 'G-NTV0NLN2X5');
     }
     persistCart();
     updateCartUI();
-    showToast("Added to CartMind 🛒");
+    showToast("Added to Orcamart 🛒");
   }
 
   // total unique item count
@@ -728,7 +728,7 @@ gtag('config', 'G-NTV0NLN2X5');
       cartIconDiv.addEventListener("click", () => {
         const totalItems = getTotalItemsCount();
         if (totalItems === 0) {
-          showToast("Your CartMind is empty — add some items ✨");
+          showToast("Your Orcamart is empty — add some items ✨");
         } else {
           let itemListMsg = `Cart has ${totalItems} item${totalItems !== 1 ? 's' : ''}. `;
           showToast(itemListMsg + "❤️ Checkout soon!");
